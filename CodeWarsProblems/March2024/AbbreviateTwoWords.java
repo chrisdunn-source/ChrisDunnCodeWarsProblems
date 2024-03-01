@@ -1,16 +1,12 @@
 public class AbbreviateTwoWords {
 
-    public static String abbrevName(String name) {
-        if (!name.contains(" ")) {
-            System.out.println("Invalid input: Name must contain two words separated by a space.");
-            return "";
-        }
-
-        String[] words = name.split(" ");
-        char firstInitial = Character.toUpperCase(words[0].charAt(0));
-        char secondInitial = Character.toUpperCase(words[1].charAt(0));
-        return firstInitial + "." + secondInitial;
-    }
+    
+  public static String abbrevName(String name) {
+    String[] words = name.split(" "); // Split the name into words using space as the delimiter
+    char firstInitial = Character.toUpperCase(words[0].charAt(0)); // Extract the first character of the first word and convert it to uppercase
+    char secondInitial = Character.toUpperCase(words[1].charAt(0)); // Extract the first character of the second word and convert it to uppercase
+    return firstInitial + "." + secondInitial; // Join the initials together with a dot in between
+  }
 
     public static void main(String[] args) {
         // Test cases
